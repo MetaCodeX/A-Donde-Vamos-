@@ -9,7 +9,10 @@ section{
     background: linear-gradient(45deg,red,blue,green,black);
     background-size: 400% 400%;
     position: relative;
+     align-items: center;
+    justify-content: center;
     animation: cambiar 10s ease-in-out infinite;
+    
 }
 button{
     background:black;
