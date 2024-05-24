@@ -1,0 +1,345 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+section {
+    width: 100%;
+    height: 100vh;
+    color: #fff;
+    background: linear-gradient(45deg, #ffbfb0, #ff6961, #ffbfb0, #ff9688);
+    background-size: 400% 400%;
+    position: relative;
+    animation: cambiar 10s ease-in-out infinite;
+    overflow: hidden; /* Asegura que el overlay no se salga del section */
+}
+
+button {
+    padding: 50px 125px;
+    text-transform: uppercase;
+    border-radius: 8px;
+    font-size: 50px;
+    font-weight: 500;
+    color: #ffffff80;
+    text-shadow: none;
+    background: linear-gradient(45deg, #ff6961, #ff9688);
+    cursor: pointer;
+    box-shadow: transparent;
+    border: 1px solid #ffffff80;
+    transition: 0.5s ease;
+    user-select: none;
+    border-radius: 50px;
+    position: absolute;
+    top: 250px; left: 350px;
+  }
+ #btn1  {
+    padding: 12px 50px;
+    text-transform: uppercase;
+    border-radius: 8px;
+    font-size: 12px;
+    font-weight: 500;
+    color: #ffffff80;
+    text-shadow: none;
+    background: linear-gradient(45deg, #ff6961, #ff9688);
+    cursor: pointer;
+    box-shadow: transparent;
+    border: 1px solid #ffffff80;
+    transition: 0.5s ease;
+    user-select: none;
+    border-radius: 50px;
+  }
+  
+  #btn:hover,
+  :focus {
+    color: #ffffff;
+    background: #ff896e;
+    border: 1px solid #ffbfb0;
+    text-shadow: 0 0 5px #ffffff, 0 0 10px #ffffff, 0 0 20px #ffffff;
+    box-shadow: 0 0 5px #ff8a70, 0 0 20px #ffbfb0, 0 0 50px #ffa38e,
+      0 0 100px #ffbfb0;
+  }
+    
+  #btn1:hover,
+  :focus {
+    color: #ffffff;
+    background: #ff896e;
+    border: 1px solid #ffbfb0;
+    text-shadow: 0 0 5px #ffffff, 0 0 10px #ffffff, 0 0 20px #ffffff;
+    box-shadow: 0 0 5px #ff8a70, 0 0 20px #ffbfb0, 0 0 50px #ffa38e,
+      0 0 100px #ffbfb0;
+  }
+  
+@keyframes cambiar {
+    0% {background-position: 0 50%;}
+    50% {background-position: 100% 50%;}
+    100% {background-position: 0 50%;}
+}
+
+#btn {
+    transition: opacity 1s ease-out;
+}
+#btn1 {
+    transition: opacity 1s ease-out;
+    position: absolute;
+    top: 1500px; left: 80px;
+  
+}
+
+.hidden {
+    opacity: 0;
+}
+.hidden1 {
+    opacity: 0;
+}
+
+
+.hidden-message {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 2em;
+    color: white;
+}
+.hidden-message1 {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 2em;
+    color: white;
+}
+
+.hidden-overlay {
+    display: none;
+}
+
+#overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7); /* Overlay semi-transparente */
+    transition: opacity 1s ease-out;
+}
+
+.contenido-adicional {
+    position: absolute;
+    top: -100%;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    transition: opacity 1s ease-out, top 1s ease-out;
+    animation: aparecer 1s forwards;
+}
+
+@keyframes aparecer {
+    100% {
+        opacity: 1;
+    }
+}
+
+.contenido-adicional.hide {
+    animation: desaparecer 1s forwards;
+}
+
+@keyframes desaparecer {
+    0% {
+        top: 50%;
+        opacity: 1;
+    }
+    100% {
+        top: -100%;
+        opacity: 0;
+    }
+}
+#imgs  {
+    /* Estilos específicos para la imagen dentro del div con id="img" */
+    width: 250px; /* Ancho deseado */
+    height: 300px; /* Alto deseado */
+    margin-top: 20px; /* Margen superior */
+    margin-left: 50px; /* Margen izquierdo */
+    border: 2px solid #fff; /* Borde blanco de 2px */
+    position: fixed;
+    top:0px; left: 100px; 
+}
+
+#imgs2  {
+    /* Estilos específicos para la imagen dentro del div con id="img" */
+    width: 250px; /* Ancho deseado */
+    height: 300px; /* Alto deseado */
+    margin-top: 20px; /* Margen superior */
+    margin-left: 50px; /* Margen izquierdo */
+    border: 2px solid #fff; /* Borde blanco de 2px */
+    position: fixed;
+    top: 310px; left: 100px; 
+}
+
+#imgs3  {
+    /* Estilos específicos para la imagen dentro del div con id="img" */
+    width: 250px; /* Ancho deseado */
+    height: 300px; /* Alto deseado */
+    margin-top: 20px; /* Margen superior */
+    margin-left: 50px; /* Margen izquierdo */
+    border: 2px solid #fff; /* Borde blanco de 2px */
+    position: fixed;
+    top: 20px; left: 1120px; 
+}
+
+#imgs4 {
+    /* Estilos específicos para la imagen dentro del div con id="img" */
+    width: 250px; /* Ancho deseado */
+    height: 300px; /* Alto deseado */
+    margin-top: 20px; /* Margen superior */
+    margin-left: 50px; /* Margen izquierdo */
+    border: 2px solid #fff; /* Borde blanco de 2px */
+    position: fixed;
+    top: 330px; left: 1120px; 
+}
+
+
+body {
+    margin: 0;
+    display: flex;
+    overflow: hidden;
+    background-color: #f0f0f0;
+}
+
+.carousel-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+  
+    display: flex;
+ 
+    
+    transform: rotate(45deg);
+}
+
+.carousel {
+    position: absolute;
+top: 200px; left: -200px;
+    display: flex;
+   
+      
+
+    }
+
+.carousel-1 {
+    animation: scroll-left 800s linear infinite;
+    top: 600px;
+    
+}
+
+.carousel-2 {
+    animation: scroll-right 800s linear infinite;
+    top: 300px;
+    
+    
+}
+
+.carousel-3 {
+    animation: scroll-left 800s linear infinite;
+    top: 0px;
+    left: -2%;
+    
+   
+    
+}
+
+.carousel-4 {
+    animation: scroll-right 800s linear infinite;
+    top: -300px;
+    left: -2%;
+    
+}
+
+@keyframes scroll-left {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+@keyframes scroll-right {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(100%);
+    }
+}
+
+.slide {
+    min-width: calc(3% - 1px);
+    box-sizing: border-box;
+    margin-right: 1px;
+    
+}
+
+.slide img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    transform: rotate(-90deg);
+}
+
+.text {
+    position: absolute;
+    top: -100%;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    transition: opacity 1s ease-out, top 1s ease-out;
+    animation: aparecer 1s forwards;
+}
+#text1{
+    /* Estilos específicos para la imagen dentro del div con id="img" */
+    width: 450px; /* Ancho deseado */
+    height: 250px; /* Alto deseado */
+    font-size: 20px;
+    color: white;
+    font-weight: bold;
+    position: fixed;
+    top: 30px; left: 620px; 
+}
+
+.fade-in {
+    opacity: 1;
+    transition: opacity 1s ease-in-out;
+}
+.hidden-text2 {
+    display: none;
+}
+#text2{
+    /* Estilos específicos para la imagen dentro del div con id="img" */
+    width: 450px; /* Ancho deseado */
+    height: 250px; /* Alto deseado */
+    font-size: 20px;
+    color: white;
+    font-weight: bold;
+    position: fixed;
+    top: 30px; left: 420px; 
+}
+.contenidotextual {
+    animation-name: moveUp;
+    animation-duration: 120s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+}
+
+@keyframes moveUp {
+    from {
+        transform: translateY(0);
+    }
+    to {
+        transform: translateY(-1200px); /* Cambia el valor según la distancia que desees mover el contenido hacia arriba */
+    }
+}
+
+
